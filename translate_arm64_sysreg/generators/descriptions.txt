@@ -1,0 +1,32 @@
+ACTLR_ELn	Auxiliary Control Register	Controls processor-specific features.
+CCSIDR_ELn	Current Cache Size ID Register	Provides information about the architecture of the currently selected cache. See Cache discovery.
+CLIDR_ELn	Cache Level ID Register
+CNTFRQ_ELn	Counter-timer Frequency Register	Reports the frequency of the system timer. See Timers.
+CNTPCT_ELn	Counter-timer Physical Count Register	Holds the 64-bit current count value. See Timers.
+CNTKCTL_ELn	Counter-timer Kernel Control Register	Controls the generation of an event stream from the virtual counter. Also controls access from EL0 to the physical counter, virtual counter, EL1 physical timers, and the virtual timer. See Timers.	1
+CNTP_CVAL_ELn	Counter-timer Physical Timer Compare Value Register	Holds the compare value for the EL1 physical timer. See Timers.
+CPACR_ELn	Coprocessor Access Control Register	Controls access to Trace, floating-point, and NEON functionality. See ISB in more detail.
+CSSELR_ELn	Cache Size Selection Register	Selects the current Cache Size ID Register, CCSIDR_EL1, by specifying the required cache level and the cache type, either instruction or data cache. See Cache discovery.	1
+CNTP_CTL_ELn	Counter-timer Physical Control Register	Control register for the EL1 physical timer. See Timers.
+CTR_ELn	Cache Type Register	Information about the architecture of the integrated caches. See Cache discovery.
+DCZID_ELn	Data Cache Zero ID Register	Indicates the block size written with byte values of 0 by the Data Cache Zero by Virtual Address (DCZVA) system instruction. See Cache discovery.	0
+ELR_ELn	Exception Link Register	Holds the address of the instruction which caused the exception.
+ESR_ELn	Exception Syndrome Register	Includes information about the reasons for the exception. See The Exception Syndrome Register.
+FAR_ELn	Fault Address Register	Holds the virtual faulting address. See Handling synchronous exceptions.
+FPCR	Floating-point Control Register	Controls floating-point extension behavior. The fields in this register map to the equivalent fields in the AArch32 FPSCR. See New features for NEON and Floating-point in AArch64.	-
+FPSR	Floating-point Status Register	Provides floating-point system status information. The fields in this register map to the equivalent fields in the AArch32 FPSCR. See New features for NEON and Floating-point in AArch64.	-
+HCR_ELn	Hypervisor Configuration Register	Controls virtualization settings and trapping of exceptions to EL2. See Exception handling.	2
+MAIR_ELn	Memory Attribute Indirection Register	Provides the memory attribute encodings corresponding to the possible values in a Long-descriptor format translation table entry for stage 1 translations at ELn. See Memory types.	1, 2, 3
+MIDR_ELn	Main ID Register	The type of processor the code is running on (part number and revision).	1
+MPIDR_ELn	Multiprocessor Affinity Register	The processor and cluster IDs, in multi-core or cluster systems. See Determining which core the code is running on.	1
+SCR_ELn	Secure Configuration Register	Controls Secure state and trapping of exceptions to EL3. See Handling synchronous exceptions.	3
+SCTLR_ELn	System Control Register	Controls architectural features, for example the MMU, caches and alignment checking.	0, 1, 2, 3
+SPSR_ELn	Saved Program Status Register	Holds the saved processor state when an exception is taken to this mode or Exception level.	abt, fiq, irq, und, 1,2, 3
+TCR_ELn	Translation Control Register	Determines which of the Translation Table Base Registers define the base address for a translation table walk required for the stage 1 translation of a memory access from ELn. Also controls the translation table format and holds cacheability and shareability information. See Separation of kernel and application Virtual Address spaces.	1, 2, 3
+TPIDR_ELn	User Read/Write Thread ID Register	Provides a location where software executing at ELn can store thread identifying information, for OS management purposes. See Context switching.	0, 1, 2, 3
+TPIDRRO_ELn	User Read-Only Thread ID Register	Provides a location where software executing at EL1 or higher can store thread identifying information. This informaton is visible to software executing at EL0, for OS management purposes. See Context switching.	0
+TTBR0_ELn	Translation Table Base Register 0	Holds the base address of translation table 0, and information about the memory it occupies. This is one of the translation tables for the stage 1 translation of memory accesses at ELn. See Separation of kernel and application Virtual Address spaces.	1, 2, 3
+TTBR1_ELn	Translation Table Base Register 1	Holds the base address of translation table 1, and information about the memory it occupies. This is one of the translation tables for the stage 1 translation of memory accesses at EL0 and EL1. See Separation of kernel and application Virtual Address spaces.	1
+VBAR_ELn	Vector Based Address Register	Holds the exception base address for any exception that is taken to ELn. See AArch64 exception table.	1, 2, 3
+VTCR_ELn	Virtualization Translation Control Register	Controls the translation table walks required for the stage 2 translation of memory accesses from Non-secure EL0 and EL1. Also holds cacheability and shareability information for the accesses. See Translations at EL2 and EL3.	2
+VTTBR_ELn	Virtualization Translation Table Base Register	Holds the base address of the translation table for the stage 2 translation of memory accesses from Non-secure EL0 and EL1. See Memory translation.	2
